@@ -15,7 +15,9 @@ const Recepies = () => {
 
     return (
         <div className='mt-10'>
-            <h1> Recepies: {recepies.length} </h1>
+
+            {/* <h1> Recepies: {recepies.length} </h1> */}
+
             <div className='recipe-container'>
                 {
                     recepies.map((recipe, idx) => <Recipe
