@@ -14,13 +14,13 @@ const Header = () => {
                 <a href="">About </a>
                 <a href="">Search </a>
             </div>
-            <div className='flex space-x-20 '>
-                <div className='flex space-x-4 '>
+            <div className='flex space-x-20 items-center '>
+                <div className='flex space-x-4 h-9 items-center bg-slate-300 rounded-xl m-2 p-6 '>
                     <img src= {icon} alt="" />
                     <input type="text" value='Search' />
                 </div>
                 <div>
-                    <img src={profile} alt="" />
+                    <img className='w-9' src={profile} alt="" />
                 </div>
             </div>
         </div>
