@@ -14,12 +14,14 @@ const Header = () => {
                 <a href="">About </a>
                 <a href="">Search </a>
             </div>
-            <div className='flex justify-between'>
-                <div className='flex space-x-4'>
+            <div className='flex space-x-20 '>
+                <div className='flex space-x-4 '>
                     <img src= {icon} alt="" />
                     <input type="text" value='Search' />
                 </div>
-                <img src= {profile} alt="" />
+                <div>
+                    <img src={profile} alt="" />
+                </div>
             </div>
         </div>
     );
