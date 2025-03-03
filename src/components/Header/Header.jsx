@@ -1,6 +1,7 @@
 import React from 'react';
 import profile from '../../assets/profile.png'
 import icon from '../../assets/fare.png'
+import { MdSearch } from "react-icons/md";
 
 const Header = () => {
     return (
@@ -15,9 +16,10 @@ const Header = () => {
                 <a href="">Search </a>
             </div>
             <div className='flex space-x-20 items-center '>
-                <div className='flex space-x-4 h-9 items-center bg-slate-300 rounded-xl m-2 p-6 '>
-                    <img src= {icon} alt="" />
-                    <input type="text" value='Search' />
+                <div className='flex space-x-1 h-10 items-center bg-slate-300 rounded-xl m-1 p-2 '>
+                    {/* <img src= {icon} alt="" /> */}
+                    <MdSearch></MdSearch>
+                    <input className='rounded-2xl ml-4' type="text" value='Search' />
                 </div>
                 <div>
                     <img className='w-9' src={profile} alt="" />
