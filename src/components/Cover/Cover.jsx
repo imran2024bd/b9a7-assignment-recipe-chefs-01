@@ -11,8 +11,8 @@ const Cover = () => {
             <p className='py-6'>Discover delicious and nutritious vegetarian recipes perfect for any meal.</p>
 
             <div className='flex justify-center space-x-10 py-6 text-2xl'>
-                <button className='bg-fuchsia-700 rounded-2xl text-center p-4'>Explore Now</button>
-                <button className='bg-green-600 rounded-2xl text-center p-4'>Our Feedback</button>
+                <button className='bg-[#0BE58A] rounded-2xl text-center p-4'>Explore Now</button>
+                <button className='rounded-2xl text-center p-4 border-2 border-dashed'>Our Feedback</button>
             </div>
         </div>
         

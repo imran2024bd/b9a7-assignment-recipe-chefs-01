@@ -5,6 +5,7 @@ import './container.css'
 const Recepies = () => {
 
     const [recepies, setRecepies] = useState([]);
+    const [wantCook, setWantCook] = useState([])
 
     useEffect(() => {
         fetch('recepies.json')
@@ -12,6 +13,12 @@ const Recepies = () => {
             .then(data => setRecepies(data))
         // .then(data => console.log(data))
     }, [])
+
+    const handleWantToCook = (recipe) => {
+        console.log(" Add to handleWantToCook");
+        console.log(recipe);
+
+    }
 
     return (
         <div className='mt-10'>
@@ -21,8 +28,9 @@ const Recepies = () => {
             <div className='recipe-container'>
                 {
                     recepies.map((recipe, idx) => <Recipe
-                        key={recipe.idx}
+                        key={idx}
                         recipe={recipe}
+                        handleWantToCook={handleWantToCook}
                     ></Recipe>)
                 }
             </div>

@@ -3,7 +3,7 @@ import Ingredient from '../Ingredient/Ingredient';
 import { IoTimeOutline } from "react-icons/io5";
 import { LiaBurnSolid } from "react-icons/lia";
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleWantToCook }) => {
     // console.log(recipe);
     const { recipe_id, recipe_image, recipe_name, preparing_time, ingredients, short_description, calories } = recipe;
     return (
@@ -44,7 +44,7 @@ const Recipe = ({ recipe }) => {
             </div>
 
 
-            <button className='bg-[#0BE58A] rounded-[20px] text-sm m-4 p-4 font-bold'>Want to Cook</button>
+            <button onClick={() => handleWantToCook(recipe)} className='bg-[#0BE58A] rounded-[20px] text-sm m-4 p-4 font-bold'>Want to Cook</button>
 
 
         </div>

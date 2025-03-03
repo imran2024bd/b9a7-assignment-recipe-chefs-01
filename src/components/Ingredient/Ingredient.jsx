@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Ingredient = ({ ingredient }) => {
-    console.log(ingredient);
+    // console.log(ingredient);
 
     return (
         <div className='ml-6 '>
