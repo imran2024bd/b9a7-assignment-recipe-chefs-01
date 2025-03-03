@@ -15,8 +15,11 @@ const Recepies = () => {
     }, [])
 
     const handleWantToCook = (recipe) => {
-        console.log(" Add to handleWantToCook");
-        console.log(recipe);
+        // console.log(" Add to handleWantToCook");
+        // console.log(recipe);
+        const newCook =[...wantCook , recipe]
+        setWantCook(newCook);
+        console.log(wantCook);
 
     }
 
@@ -30,6 +33,7 @@ const Recepies = () => {
                     recepies.map((recipe, idx) => <Recipe
                         key={idx}
                         recipe={recipe}
+                        wantCook={wantCook}
                         handleWantToCook={handleWantToCook}
                     ></Recipe>)
                 }

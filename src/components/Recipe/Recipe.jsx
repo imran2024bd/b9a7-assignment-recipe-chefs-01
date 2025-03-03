@@ -2,8 +2,9 @@ import React from 'react';
 import Ingredient from '../Ingredient/Ingredient';
 import { IoTimeOutline } from "react-icons/io5";
 import { LiaBurnSolid } from "react-icons/lia";
+import Cooks from '../Cooks/Cooks';
 
-const Recipe = ({ recipe, handleWantToCook }) => {
+const Recipe = ({ recipe, handleWantToCook, wantCook }) => {
     // console.log(recipe);
     const { recipe_id, recipe_image, recipe_name, preparing_time, ingredients, short_description, calories } = recipe;
     return (
@@ -46,6 +47,11 @@ const Recipe = ({ recipe, handleWantToCook }) => {
 
             <button onClick={() => handleWantToCook(recipe)} className='bg-[#0BE58A] rounded-[20px] text-sm m-4 p-4 font-bold'>Want to Cook</button>
 
+            {
+                wantCook.map(cooks =><Cooks
+                cooks={cooks}
+                ></Cooks>)
+            }
 
         </div>
     );
