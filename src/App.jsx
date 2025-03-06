@@ -8,6 +8,7 @@ import Header from './components/Header/Header'
 import Recepies from './components/Recepies/Recepies'
 import Cooks from './components/Cooks/Cooks'
 
+
 function App() {
 
   const [wantCook, setWantCook] = useState([])
@@ -30,17 +31,25 @@ function App() {
         <Cover></Cover>
         <Content></Content>
 
-        <div className='flex items-center '>
-          <Recepies
-            handleWantToCook={handleWantToCook}
-          ></Recepies>
+        <div className='flex items-center   '>
+          <div className='w-2/3'>
+            <Recepies
+              handleWantToCook={handleWantToCook}
+            ></Recepies>
+          </div>
 
-          {
+        <div className='w-1/3'>
+            <Cooks
+              wantCook={wantCook}
+            ></Cooks>
+        </div>
+
+          {/* {
             wantCook.map((cooks, idx) => <Cooks
               key={idx}
               cooks={cooks}
             ></Cooks>)
-          }
+          } */}
 
         </div>
 
