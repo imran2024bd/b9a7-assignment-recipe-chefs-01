@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import Cook from './Cook/Cook';
 
-const Cooks = ({ wantCook }) => {
+const Cooks = ({ wantCook , handleAddToPreparing }) => {
     // console.log(cooks);
 
-    console.log(wantCook);
+    // console.log(wantCook);
 
     return (
         <div className='  border-2 rounded-xl '>
@@ -24,6 +24,7 @@ const Cooks = ({ wantCook }) => {
                     key={idx}
                     cook={cook}
                     idx={idx}
+                    handleAddToPreparing={handleAddToPreparing}
                 ></Cook>))
             }
 
@@ -33,7 +34,8 @@ const Cooks = ({ wantCook }) => {
 };
 
 Cooks.propTypes = {
-    wantCook:PropTypes.array.isRequired
+    wantCook:PropTypes.array.isRequired ,
+    handleAddToPreparing:PropTypes.func.isRequired
 }
 
 export default Cooks;

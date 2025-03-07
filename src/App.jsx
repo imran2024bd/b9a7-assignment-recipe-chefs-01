@@ -19,10 +19,19 @@ function App() {
     const newCook = [...wantCook, recipe]
     setWantCook(newCook);
     // console.log(wantCook);
-
   }
 
 
+
+  const handleAddToPreparing = (id) => {
+    // console.log("Prepare");
+    // console.log(id);
+    const remainingCook = wantCook.filter((cook) => cook.recipe_id != id)
+    // console.log(remainingCook);
+    setWantCook(remainingCook);
+  }
+
+  
   return (
     <>
 
@@ -41,6 +50,7 @@ function App() {
           <div className='w-1/3'>
             <Cooks
               wantCook={wantCook}
+              handleAddToPreparing={handleAddToPreparing}
             ></Cooks>
           </div>
         </div>
