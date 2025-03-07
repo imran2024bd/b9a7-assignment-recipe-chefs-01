@@ -38,19 +38,11 @@ function App() {
             ></Recepies>
           </div>
 
-        <div className='w-1/3'>
+          <div className='w-1/3'>
             <Cooks
               wantCook={wantCook}
             ></Cooks>
-        </div>
-
-          {/* {
-            wantCook.map((cooks, idx) => <Cooks
-              key={idx}
-              cooks={cooks}
-            ></Cooks>)
-          } */}
-
+          </div>
         </div>
 
       </div>
