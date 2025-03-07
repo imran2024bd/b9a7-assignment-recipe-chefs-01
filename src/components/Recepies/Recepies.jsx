@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import Recipe from '../Recipe/Recipe';
 import './container.css'
+import PropTypes from 'prop-types';
 
 const Recepies = ({ handleWantToCook }) => {
 
@@ -34,5 +35,9 @@ const Recepies = ({ handleWantToCook }) => {
         </div>
     );
 };
+
+Recepies.propTypes={
+    handleWantToCook:PropTypes.func.isRequired
+}
 
 export default Recepies;

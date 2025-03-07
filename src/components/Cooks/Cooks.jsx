@@ -1,10 +1,10 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import Cook from './Cook/Cook';
 
 const Cooks = ({ wantCook }) => {
     // console.log(cooks);
 
-    // console.log(wantCook);
+    console.log(wantCook);
 
     return (
         <div className='  border-2 rounded-xl '>
@@ -31,5 +31,9 @@ const Cooks = ({ wantCook }) => {
         </div>
     );
 };
+
+Cooks.propTypes = {
+    wantCook:PropTypes.array.isRequired
+}
 
 export default Cooks;

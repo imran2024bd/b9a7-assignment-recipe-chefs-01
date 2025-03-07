@@ -1,12 +1,12 @@
-import React from 'react';
+
 import Ingredient from '../Ingredient/Ingredient';
 import { IoTimeOutline } from "react-icons/io5";
 import { LiaBurnSolid } from "react-icons/lia";
-import Cooks from '../Cooks/Cooks';
+import PropTypes from 'prop-types';
 
 const Recipe = ({ recipe, handleWantToCook}) => {
     // console.log(recipe);
-    const { recipe_id, recipe_image, recipe_name, preparing_time, ingredients, short_description, calories } = recipe;
+    const { recipe_image, recipe_name, preparing_time, ingredients, short_description, calories } = recipe;
     return (
         <div className='text-left m-10 p-5 border-2 rounded-xl  '>
 
@@ -52,5 +52,10 @@ const Recipe = ({ recipe, handleWantToCook}) => {
         </div>
     );
 };
+
+Recipe.propTypes = {
+    recipe:PropTypes.object.isRequired,
+    handleWantToCook:PropTypes.func.isRequired
+}
 
 export default Recipe;
