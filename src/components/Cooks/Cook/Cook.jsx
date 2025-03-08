@@ -13,6 +13,7 @@ const Cook = ({ cook, idx,  handleAddToPreparing }) => {
             {/* <p>{recipe_name.slice(0,20)}</p> */}
             <p>{preparing_time}</p>
             <p>{calories}</p>
+            
             <button
                 onClick={() => handleAddToPreparing(recipe_id)}
                 className='bg-[#0BE58A] rounded-[20px] text-xs m-1 p-1 font-medium'>

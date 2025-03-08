@@ -3,16 +3,16 @@ import Cook from './Cook/Cook';
 import CurrentCook from '../CurrentCook/CurrentCook';
 
 
-
-
 const Cooks = ({ wantCook, handleAddToPreparing, currentCooks }) => {
     // console.log(cooks);
 
     // console.log(wantCook);
 
+    // console.log(currentCooks);
+
     return (
         <div className='  border-2 rounded-xl '>
-            <h1 className='text-2xl font-semibold m-2 p-2' >Want to cook: {wantCook.length} </h1>
+            <h1 className='text-2xl font-semibold m-2 p-2' > Want to cook: {wantCook.length} </h1>
             <hr />
 
             <div className='flex justify-around m-6 text-xs space-x-6'>
@@ -45,13 +45,11 @@ const Cooks = ({ wantCook, handleAddToPreparing, currentCooks }) => {
             </div>
 
             {
-                currentCooks.map((currentCook, idx) => (<CurrentCook
+                currentCooks.map((currentCook, idx) => <CurrentCook
                     key={idx}
                     currentCook={currentCook}
-                ></CurrentCook>))
+                ></CurrentCook>)
             }
-
-
 
 
 

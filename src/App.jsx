@@ -2,11 +2,11 @@
 import { useState } from 'react'
 import './App.css'
 import Content from './components/Content/Content'
-
 import Cover from './components/Cover/Cover'
 import Header from './components/Header/Header'
 import Recepies from './components/Recepies/Recepies'
 import Cooks from './components/Cooks/Cooks'
+
 
 
 function App() {
@@ -27,17 +27,17 @@ function App() {
     // console.log("Prepare");
     // console.log(id);
     const remainingCook = wantCook.filter((cook) => cook.recipe_id != id)
-    // console.log(remainingCook);
+    console.log(remainingCook);
     setWantCook(remainingCook);
 
     const currentCook = wantCook.filter((cook) => cook.recipe_id == id)
-    // console.log(currentCook);
+    console.log(currentCook);
     const newCurrentCook = [...currentCooks, currentCook]
-    // console.log(newCurrentCook);
+    console.log(newCurrentCook);
     setCurrentCooks(newCurrentCook);
   }
 
-  console.log(currentCooks);
+  // console.log(currentCooks);
   
   return (
     <>
@@ -63,7 +63,6 @@ function App() {
 
           </div>
         </div>
-
       </div>
 
     </>
