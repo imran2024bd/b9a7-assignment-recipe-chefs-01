@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Cook from './Cook/Cook';
+import CurrentlyCook from '../CurrentlyCook/CurrentlyCook';
 
 const Cooks = ({ wantCook , handleAddToPreparing }) => {
     // console.log(cooks);
@@ -8,7 +9,7 @@ const Cooks = ({ wantCook , handleAddToPreparing }) => {
 
     return (
         <div className='  border-2 rounded-xl '>
-            <h1 className='text-2xl font-semibold m-6 p-6' >Want to cook: {wantCook.length} </h1>
+            <h1 className='text-2xl font-semibold m-2 p-2' >Want to cook: {wantCook.length} </h1>
             <hr />
 
             <div className='flex justify-around m-6 text-xs space-x-6'>
@@ -27,6 +28,11 @@ const Cooks = ({ wantCook , handleAddToPreparing }) => {
                     handleAddToPreparing={handleAddToPreparing}
                 ></Cook>))
             }
+            
+            <CurrentlyCook
+            
+            ></CurrentlyCook>
+
 
 
         </div>

@@ -19,7 +19,6 @@ const Cook = ({ cook, idx,  handleAddToPreparing }) => {
                 Preparing</button>
 
 
-
         </div>
     );
 };
