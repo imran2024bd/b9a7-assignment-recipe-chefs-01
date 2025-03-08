@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import Cook from './Cook/Cook';
+import CurrentCook from '../CurrentCook/CurrentCook';
 
 
 
-const Cooks = ({ wantCook , handleAddToPreparing }) => {
+
+const Cooks = ({ wantCook, handleAddToPreparing, currentCooks }) => {
     // console.log(cooks);
 
     // console.log(wantCook);
@@ -29,19 +31,38 @@ const Cooks = ({ wantCook , handleAddToPreparing }) => {
                     handleAddToPreparing={handleAddToPreparing}
                 ></Cook>))
             }
-             <hr />
-            
-            
 
-                
+            <hr />
+
+            <h1 className='text-2xl font-semibold m-2 p-2'> Currently cooking: {currentCooks.length} </h1>
+            <hr />
+
+            <div className='flex justify-around m-6 text-xs space-x-6'>
+                <p>Sl</p>
+                <p>Name</p>
+                <p>Time</p>
+                <p>Calories</p>
+            </div>
+
+            {
+                currentCooks.map((currentCook, idx) => (<CurrentCook
+                    key={idx}
+                    currentCook={currentCook}
+                ></CurrentCook>))
+            }
+
+
+
+
 
         </div>
     );
 };
 
 Cooks.propTypes = {
-    wantCook:PropTypes.array.isRequired ,
-    handleAddToPreparing:PropTypes.func.isRequired
+    wantCook: PropTypes.array.isRequired,
+    handleAddToPreparing: PropTypes.func.isRequired,
+    currentCooks: PropTypes.func.isRequired
 }
 
 export default Cooks;

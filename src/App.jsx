@@ -21,7 +21,7 @@ function App() {
     // console.log(wantCook);
   }
 
-
+  const [currentCooks, setCurrentCooks] = useState([]);
 
   const handleAddToPreparing = (id) => {
     // console.log("Prepare");
@@ -29,8 +29,15 @@ function App() {
     const remainingCook = wantCook.filter((cook) => cook.recipe_id != id)
     // console.log(remainingCook);
     setWantCook(remainingCook);
+
+    const currentCook = wantCook.filter((cook) => cook.recipe_id == id)
+    // console.log(currentCook);
+    const newCurrentCook = [...currentCooks, currentCook]
+    // console.log(newCurrentCook);
+    setCurrentCooks(newCurrentCook);
   }
 
+  console.log(currentCooks);
   
   return (
     <>
@@ -51,8 +58,9 @@ function App() {
             <Cooks
               wantCook={wantCook}
               handleAddToPreparing={handleAddToPreparing}
+              currentCooks={currentCooks}
             ></Cooks>
-            
+
           </div>
         </div>
 
