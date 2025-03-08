@@ -1,7 +1,7 @@
 
 
-const CurrentlyCook = ({currentCook}) => {
-    console.log(currentCook);
+const CurrentlyCook = () => {
+    // console.log(currentCook);
     return (
         <div>
             <h1 className='text-2xl font-semibold m-2 p-2'>Currently cooking:</h1>

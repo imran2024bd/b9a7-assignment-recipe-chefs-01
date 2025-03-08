@@ -17,11 +17,11 @@ const Cook = ({ cook, idx,  handleAddToPreparing }) => {
                 onClick={() => handleAddToPreparing(recipe_id)}
                 className='bg-[#0BE58A] rounded-[20px] text-xs m-1 p-1 font-medium'>
                 Preparing</button>
-
-
         </div>
     );
 };
+
+
 
 Cook.propTypes = {
     cook: PropTypes.object.isRequired,

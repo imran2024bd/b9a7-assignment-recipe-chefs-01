@@ -52,6 +52,7 @@ function App() {
               wantCook={wantCook}
               handleAddToPreparing={handleAddToPreparing}
             ></Cooks>
+            
           </div>
         </div>
 
@@ -61,4 +62,4 @@ function App() {
   )
 }
 
-export default App
+export default App 

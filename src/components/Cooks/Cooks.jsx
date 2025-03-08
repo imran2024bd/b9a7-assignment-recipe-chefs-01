@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Cook from './Cook/Cook';
-import CurrentlyCook from '../CurrentlyCook/CurrentlyCook';
+
+
 
 const Cooks = ({ wantCook , handleAddToPreparing }) => {
     // console.log(cooks);
@@ -17,7 +18,7 @@ const Cooks = ({ wantCook , handleAddToPreparing }) => {
                 <p>Name</p>
                 <p>Time</p>
                 <p>Calories</p>
-                <p> Btn</p>
+                {/* <p> Btn</p> */}
             </div>
 
             {
@@ -28,12 +29,11 @@ const Cooks = ({ wantCook , handleAddToPreparing }) => {
                     handleAddToPreparing={handleAddToPreparing}
                 ></Cook>))
             }
+             <hr />
             
-            <CurrentlyCook
             
-            ></CurrentlyCook>
 
-
+                
 
         </div>
     );
