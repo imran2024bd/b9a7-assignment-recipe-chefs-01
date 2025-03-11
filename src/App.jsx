@@ -24,21 +24,19 @@ function App() {
   const [currentCooks, setCurrentCooks] = useState([]);
 
   const handleAddToPreparing = (id) => {
-    // console.log("Prepare");
-    // console.log(id);
     const remainingCook = wantCook.filter((cook) => cook.recipe_id != id)
-    console.log(remainingCook);
+    // console.log(remainingCook);
     setWantCook(remainingCook);
 
     const currentCook = wantCook.filter((cook) => cook.recipe_id == id)
-    console.log(currentCook);
-    const newCurrentCook = [...currentCooks, currentCook]
-    console.log(newCurrentCook);
-    setCurrentCooks(newCurrentCook);
+    // console.log(currentCook);
+    setCurrentCooks([...currentCooks , currentCook])
+    
   }
 
-  // console.log(currentCooks);
-  
+ 
+
+
   return (
     <>
 

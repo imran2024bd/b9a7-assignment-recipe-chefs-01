@@ -1,17 +1,21 @@
 import PropTypes from "prop-types";
 
-const CurrentCook = ({ currentCook}) => {
+const CurrentCook = ({ currentCook, idx }) => {
     // console.log(currentCook);
 
-    const { recipe_name, preparing_time, calories} = currentCook ;
-
-    // console.log(currentCook.recipe_name);
-
     return (
-        <div className="flex justify-around items-center m-6 bg-yellow-400 rounded-lg text-xs text-center space-x-6">
-            <h1>{recipe_name}</h1>
-            <h1>{preparing_time}</h1>
-            <h1>{calories}</h1>
+        <div >
+            {
+                currentCook.map(cookObj =>(
+                    <div className="flex justify-around items-center m-12 bg-[#28282808] rounded-lg text-xs text-center space-x-6">
+                        <p> {idx + 1} </p>
+                        <h1>{cookObj.recipe_name}</h1>
+                        <h1>{cookObj.preparing_time}</h1>
+                        <h1>{cookObj.calories}</h1>
+                    </div>
+                    
+                ))
+            }       
         </div>
     );
 };
@@ -19,7 +23,8 @@ const CurrentCook = ({ currentCook}) => {
 
 
 CurrentCook.propTypes = {
-    currentCook : PropTypes.object.isRequired
+    currentCook: PropTypes.object.isRequired,
+    idx: PropTypes.number.isRequired
 }
 
 export default CurrentCook;
