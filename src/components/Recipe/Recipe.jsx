@@ -36,16 +36,16 @@ const Recipe = ({ recipe, handleWantToCook}) => {
             <div className='flex space-x-6 mt-6 '>
                 <div className='flex items-center space-x-1'>
                     <IoTimeOutline></IoTimeOutline>
-                    <p>{preparing_time} </p>
+                    <p>{preparing_time} minutes </p>
                 </div>
                 <div className='flex items-center space-x-1'>
                     <LiaBurnSolid></LiaBurnSolid>
-                    <p> {calories} </p>
+                    <p> {calories} calories </p>
                 </div>
             </div>
 
 
-            <button onClick={() => handleWantToCook(recipe)} className='bg-[#0BE58A] rounded-[20px] text-sm m-2 p-2 font-semibold'>Want to Cook</button>
+            <button onClick={() => handleWantToCook(recipe)} className='bg-[#0BE58A] rounded-[20px] text-sm m-2 mt-8 p-2 font-semibold'>Want to Cook</button>
 
            
 

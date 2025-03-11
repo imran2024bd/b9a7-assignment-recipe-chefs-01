@@ -11,8 +11,8 @@ const Cook = ({ cook, idx,  handleAddToPreparing }) => {
             <p> {idx + 1} </p>
             <p>{recipe_name}</p>
             {/* <p>{recipe_name.slice(0,20)}</p> */}
-            <p>{preparing_time}</p>
-            <p>{calories}</p>
+            <p>{preparing_time} minutes</p>
+            <p>{calories} calories</p>
             
             <button
                 onClick={() => handleAddToPreparing(recipe_id)}

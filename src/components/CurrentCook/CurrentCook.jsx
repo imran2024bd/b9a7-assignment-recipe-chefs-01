@@ -6,16 +6,30 @@ const CurrentCook = ({ currentCook, idx }) => {
     return (
         <div >
             {
-                currentCook.map(cookObj =>(
+                currentCook.map(cookObj => (
                     <div className="flex justify-around items-center m-12 bg-[#28282808] rounded-lg text-xs text-center space-x-6">
                         <p> {idx + 1} </p>
                         <h1>{cookObj.recipe_name}</h1>
-                        <h1>{cookObj.preparing_time}</h1>
-                        <h1>{cookObj.calories}</h1>
+                        <h1>{cookObj.preparing_time} minutes</h1>
+                        <h1>{cookObj.calories} calories</h1>
                     </div>
-                    
+
                 ))
-            }       
+            }
+
+            {/* Total Time minutes Section */}
+
+            {
+                currentCook.map(totalCurrent => (
+                    <div  >
+                        <p>Total Time =
+                            ${totalCurrent.preparing_time} minutes</p>
+                        <p>Total Calories =
+                            ${totalCurrent.calories} calories</p>
+                    </div>
+                ))
+            }
+
         </div>
     );
 };
